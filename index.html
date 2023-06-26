@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url('b.png');
+            background-size: cover;
+            
+        }
+
+        #loginForm {
+            background-image: url(c.png);
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 300px;
+        }
+
+        #timer {
+            background-image: url(e.png);
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            text-align: center;
+            font-size: 40px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    <title>Login</title>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "k24e" && password === "240121") {
+                document.getElementById("loginForm").style.display = "none";
+                document.getElementById("timer").style.display = "block";
+                startTimer();
+            } else {
+                alert("Credenciales incorrectas. Inténtalo nuevamente.");
+            }
+        }
+
+        function startTimer() {
+    var days = 32;
+    var hours = 0;
+    var minutes = 0;
+    var seconds = 0;
+
+    var countdown = setInterval(function() {
+        document.getElementById("timer").innerHTML = "Tiempo restante: " + days + " días " + hours + " horas " + minutes + " minutos " + seconds + " segundos para tu sorpresa";
+
+        if (seconds === 0) {
+            if (minutes === 0) {
+                if (hours === 0) {
+                    if (days === 0) {
+                        clearInterval(countdown);
+                        document.getElementById("timer").innerHTML = "¡Tiempo agotado!";
+                    } else {
+                        days--;
+                        hours = 23;
+                        minutes = 59;
+                        seconds = 59;
+                    }
+                } else {
+                    hours--;
+                    minutes = 59;
+                    seconds = 59;
+                }
+            } else {
+                minutes--;
+                seconds = 59;
+            }
+        } else {
+            seconds--;
+        }
+    }, 1000);
+}
+
+    </script>
+    <style>
+        #timer {
+            display: none;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <h2>Iniciar sesión</h2>
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" required><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" required><br>
+        <button onclick="login()">Ingresar</button>
+    </div>
+
+    <div id="timer"></div>
+</body>
+</html>
