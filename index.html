@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
     <style>
         body {
+            margin-left: 30px; /* Margen izquierdo */
+            margin-right: 20px; /* Margen derecho */
             background-image: url('b.png');
             background-size: cover;
             
@@ -23,77 +24,126 @@
             width: 300px;
         }
 
-        #timer {
-            background-image: url(e.png);
-            background-size: cover;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
+        .contenedor {
+            width: 200px;
+            height: 250px;
+            border: 4px solid black;
+            margin-bottom: 10px;
+        }
+
+        .contenedor-1,
+        .contenedor-3 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px; /* Agrega margen inferior */
+        }
+
+        .contenedor-2 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px; /* Agrega margen inferior */
+            transform: scale(0.64); /* Ajusta el valor según tus necesidades */
+        }
+
+        .contenedor-horizontal {
+            display: flex;
+        }
+
+        .contenedor {
             text-align: center;
-            font-size: 40px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-    </style>
-    <title>Login</title>
-    <script>
-        function login() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            if (username === "k24e" && password === "240121") {
-                document.getElementById("loginForm").style.display = "none";
-                document.getElementById("timer").style.display = "block";
-                startTimer();
-            } else {
-                alert("Credenciales incorrectas. Inténtalo nuevamente.");
-            }
         }
 
-        function startTimer() {
-    var days = 32;
-    var hours = 0;
-    var minutes = 0;
-    var seconds = 0;
 
-    var countdown = setInterval(function() {
-        document.getElementById("timer").innerHTML = "Tiempo restante: " + days + " días " + hours + " horas " + minutes + " minutos " + seconds + " segundos para tu sorpresa";
 
-        if (seconds === 0) {
-            if (minutes === 0) {
-                if (hours === 0) {
-                    if (days === 0) {
-                        clearInterval(countdown);
-                        document.getElementById("timer").innerHTML = "¡Tiempo agotado!";
-                    } else {
-                        days--;
-                        hours = 23;
-                        minutes = 59;
-                        seconds = 59;
-                    }
-                } else {
-                    hours--;
-                    minutes = 59;
-                    seconds = 59;
-                }
-            } else {
-                minutes--;
-                seconds = 59;
-            }
-        } else {
-            seconds--;
+        .contenedor-1,
+        .contenedor-2,
+        .contenedor-3 {
+            margin-bottom: -60px;
         }
-    }, 1000);
-}
 
-    </script>
-    <style>
-        #timer {
-            display: none;
-            font-size: 20px;
-            margin-top: 10px;
+        /* Estilos personalizados para cada contenedor */
+        #contenedor1 {
+            background-color: lightblue;
+        }
+
+        #contenedor2 {
+            background-color: lightgreen;
+        }
+
+        #contenedor3 {
+            background-color: lightyellow;
+        }
+
+        #contenedor4 {
+            background-color: pink;
+        }
+
+        #contenedor5 {
+            background-color: lightgray;
+        }
+
+        #contenedor6 {
+            background-color: rgb(164, 164, 231);
+        }
+
+        #contenedor7 {
+            background-color: lightcoral;
+        }
+
+        #contenedor8 {
+            background-color: lightseagreen;
+        }
+
+        #contenedor9 {
+            background-color: lightsalmon;
+        }
+
+        #contenedor10 {
+            background-color: lightcyan;
+        }
+
+        #contenedor11 {
+            background-color: rgb(129, 174, 233);
+        }
+
+        #contenedor12 {
+            background-color: lightskyblue;
+        }
+
+        #contenedor13 {
+            background-color: lightpink;
+        }
+
+        #contenedor14 {
+            background-color: rgb(231, 231, 141);
+        }
+
+        #contenedor15 {
+            background-color: rgb(125, 226, 125);
+        }
+
+        #contenedor16 {
+            background-color: rgb(111, 221, 153);
+        }
+
+        #contenedor17 {
+            background-color: rgb(111, 166, 221);
+        }
+
+        #contenedor18 {
+            background-color: rgb(221, 111, 162);
+        }
+
+        #contenedor19 {
+            background-color: rgb(221, 111, 116);
+        }
+
+        #contenedor20 {
+            background-color: rgb(221, 219, 111);
+        }
+
+        #contenedor21 {
+            background-color: rgb(221, 137, 111);
         }
     </style>
 </head>
@@ -107,6 +157,159 @@
         <button onclick="login()">Ingresar</button>
     </div>
 
-    <div id="timer"></div>
+    <div id="contenedores" style="display: none;">
+        <!-- Primer bloque de cuatro contenedores horizontales -->
+        <div class="contenedor-1">
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor1">
+                    <center><h1>F</h1></center>
+                    <p>Para ti, que eres la mujer más maravillosa del mundo, quiero expresarte lo que mereces: todo el amor y la felicidad que existen en este vasto universo. 
+                        Tu presencia ilumina mi vida y mi corazón se desborda de gratitud por tenerte a mi lado. </p>
+                </div>
+            </div>
+            
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor2">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                    
+                    <!--<p>Eres la personificación de la belleza y la bondad, y cada día me sorprendes con tu dulzura y ternura. 
+                        Tu sonrisa es mi luz en los días oscuros y tu abrazo es mi refugio en los momentos difíciles.</p> -->
+                </div>
+            </div>
+            
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor3">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                    <!--<p>Quiero entregarte un pedacito de todo lo que mereces, porque en realidad mereces el mundo entero. Mereces ser amada, 
+                        valorada y respetada en cada instante. Mereces que se reconozca tu grandeza y se celebre tu existencia.</p> -->
+                </div>
+            </div>
+            
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor4">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                    <!--<p>Estaré aquí, a tu lado, para recordarte siempre cuán extraordinaria eres y para hacer todo lo que esté a mi alcance para que 
+                        sonrías y te sientas amada. Eres mi inspiración y mi motor para ser mejor cada día.</p>-->
+                </div>
+            </div>
+        
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor5">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                    <!--<p>Gracias por ser quien eres y por permitirme formar parte de tu vida. Te amo más de lo que las palabras pueden expresar y siempre estaré aquí para amarte 
+                        y apreciarte como te mereces, mi amor eterno.</p>-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Segundo bloque de cuatro contenedores horizontales -->
+        <div class="contenedor-2">
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor6">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor7">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor8">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor9">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor10">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor11">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor12">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor13">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor14">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+                <div class="contenedor" id="contenedor15">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+            </div>
+        </div>
+
+        <!-- Tercer bloque de cuatro contenedores horizontales -->
+        <div class="contenedor-3">
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor16">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+            </div>
+
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor17">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+            </div>
+
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor18">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+            </div>
+
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor19">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+            </div>
+
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor20">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+            </div>
+
+            <div class="contenedor-horizontal">
+                <div class="contenedor" id="contenedor21">
+                    <center><h1></h1></center>
+                    <img src="candado.png" alt="" width="150px" height="125px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === 'k24e' && password === '240121') {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('contenedores').style.display = 'block';
+            } else {
+                alert('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+            }
+        }
+    </script>
 </body>
 </html>
